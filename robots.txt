@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://guilhermeviveiros.github.io/TowerVision.io/sitemap.xml
+Sitemap: https://manzar96.github.io/mf2.io/sitemap.xml
 
 # Crawl-delay for politeness
 Crawl-delay: 1
