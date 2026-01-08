@@ -15,7 +15,7 @@ const IntroSection = () => {
                   <img src={`${process.env.PUBLIC_URL}/a.png`} alt="Movie Facts and Fibs (MF2): A Benchmark for Long Movie Understanding" className="tower-image-title" />
                 </div> */} 
               <h1 className="paper-main-title">
-              🍿 Movie Facts and Fibs: A Benchmark for Long Movie Understanding
+              🍿 Movie Facts and Fibs: A Benchmark for Long Video Understanding
               </h1>
               <h2 className="paper-subtitle-text">
                 <span style={{fontStyle: 'normal'}}>⏳</span> MF2 is under review ...
