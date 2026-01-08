@@ -1,0 +1,65 @@
+.contact-section {
+  background: #f8fafc;
+  padding: 2rem 0;
+  position: relative;
+  border-top: 1px solid #f1f5f9;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-title {
+  font-family: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d5a87;
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.contact-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-email {
+  color: #2d5a87;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #2d5a87;
+  transition: all 0.2s ease;
+}
+
+.contact-email:hover {
+  color: #1e3a5f;
+  border-bottom-color: #1e3a5f;
+  background: rgba(45, 90, 135, 0.05);
+  padding: 0 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1.5rem 0;
+  }
+
+  .contact-container {
+    padding: 0 1rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+

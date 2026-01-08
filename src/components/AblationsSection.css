@@ -1,0 +1,199 @@
+.ablations-section {
+  background: white;
+  padding: 2rem 0;
+  position: relative;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ablations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ablations-title {
+  font-family: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d5a87;
+  text-align: center;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.5;
+}
+
+.ablations-title .paper-link {
+  color: #2d5a87;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+.ablations-title .paper-link:hover {
+  color: #1e3a5f;
+  text-decoration-thickness: 3px;
+  text-shadow: 0 2px 8px rgba(45, 90, 135, 0.2);
+}
+
+.ablations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.ablation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ablation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2d5a87, #3b82f6, #8b5cf6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.ablation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(45, 90, 135, 0.15);
+  border-color: #2d5a87;
+}
+
+.ablation-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ablation-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  filter: grayscale(0.2);
+  transition: all 0.3s ease;
+}
+
+.ablation-card:hover .ablation-icon {
+  transform: scale(1.15);
+  filter: grayscale(0);
+}
+
+.ablation-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.ablation-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ablations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ablation-card {
+    padding: 1.75rem;
+  }
+
+  .ablation-icon {
+    font-size: 2.5rem;
+  }
+
+  .ablation-heading {
+    font-size: 1.1rem;
+  }
+
+  .ablation-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .ablations-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ablations-section {
+    padding: 1.5rem 0;
+  }
+
+  .ablations-container {
+    padding: 0 1rem;
+  }
+
+  .ablations-title {
+    font-size: 1.2rem;
+  }
+
+  .ablations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .ablation-card {
+    padding: 1.5rem;
+  }
+
+  .ablation-icon {
+    font-size: 2.25rem;
+  }
+
+  .ablation-heading {
+    font-size: 1.05rem;
+  }
+
+  .ablation-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ablations-title {
+    font-size: 1.1rem;
+  }
+
+  .ablation-card {
+    padding: 1.25rem;
+  }
+
+  .ablation-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ablation-heading {
+    font-size: 1rem;
+  }
+
+  .ablation-text {
+    font-size: 0.85rem;
+  }
+}
+

@@ -1,0 +1,74 @@
+.movie-preview-section {
+  background: white;
+  padding: 1.5rem 0;
+  position: relative;
+  border-top: 1px solid #f1f5f9;
+}
+
+.movie-preview-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.movie-preview-title {
+  font-family: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d5a87;
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.movie-preview-intro {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+
+.movie-preview-intro .intro-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+.movie-preview-intro .fact-text {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.movie-preview-intro .fib-text {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.movie-preview-intro a {
+  color: #2d5a87;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #2d5a87;
+  transition: all 0.2s ease;
+}
+
+.movie-preview-intro a:hover {
+  color: #1e3a5f;
+  border-bottom-color: #1e3a5f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-preview-section {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-preview-section {
+    padding: 1rem 0;
+  }
+}
+

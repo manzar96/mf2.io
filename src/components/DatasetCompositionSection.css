@@ -1,0 +1,249 @@
+.dataset-composition-section {
+  background: white;
+  padding: 2rem 0;
+  position: relative;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dataset-composition-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.dataset-composition-title {
+  font-family: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d5a87;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.dataset-composition-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+}
+
+.dataset-composition-intro strong {
+  color: #2d5a87;
+  font-weight: 600;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(45, 90, 135, 0.1);
+  border: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  font-family: 'Libre Baskerville', 'Baskerville', 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d5a87;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Pie Chart Styles */
+.pie-chart-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.pie-chart-svg {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+}
+
+/* Bar Chart Styles */
+.bar-chart-placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.bar-chart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bar-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.bar-wrapper {
+  width: 100%;
+  height: 32px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.75rem;
+  transition: width 0.8s ease;
+  border-radius: 6px;
+}
+
+.bar-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Legend Styles */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 0.9rem;
+  color: #1e293b;
+  flex: 1;
+}
+
+.legend-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d5a87;
+}
+
+/* Chart Note */
+.chart-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.chart-note .note-asterisk {
+  font-weight: 700;
+  color: #2d5a87;
+  margin-right: 0.25rem;
+  font-style: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dataset-composition-section {
+    padding: 3rem 0;
+  }
+  
+  .dataset-composition-container {
+    padding: 0 1rem;
+  }
+  
+  .dataset-composition-title {
+    font-size: 1.5rem;
+  }
+
+  .dataset-composition-intro {
+    font-size: 0.95rem;
+  }
+
+  .chart-box {
+    padding: 1.5rem;
+  }
+
+  .chart-title {
+    font-size: 1.1rem;
+  }
+
+  .bar-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dataset-composition-section {
+    padding: 2rem 0;
+  }
+  
+  .dataset-composition-title {
+    font-size: 1.3rem;
+  }
+
+  .dataset-composition-intro {
+    font-size: 0.9rem;
+  }
+
+  .chart-box {
+    padding: 1.25rem;
+  }
+
+  .bar-wrapper {
+    height: 28px;
+  }
+
+  .bar-value {
+    font-size: 0.75rem;
+  }
+}
+
