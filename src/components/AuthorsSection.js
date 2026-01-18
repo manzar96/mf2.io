@@ -68,7 +68,7 @@ const AuthorsSection = () => {
           </div>
         </div>
       
-        <div className="affiliations">
+        {/* <div className="affiliations">
           <div className="affiliation-group">
             <img src={`${process.env.PUBLIC_URL}/institution_logos/ist.jpg`} alt="IST" className="affiliation-logo first-logo" />
             <img src={`${process.env.PUBLIC_URL}/institution_logos/it.png`} alt="IT" className="affiliation-logo" />
@@ -84,7 +84,7 @@ const AuthorsSection = () => {
             <img src={`${process.env.PUBLIC_URL}/institution_logos/ellis.jpg`} alt="ELLIS" className="affiliation-logo" />
             <img src={`${process.env.PUBLIC_URL}/institution_logos/NTU_Logo.webp`} alt="NTU" className="affiliation-logo last-logo" />
           </div>
-        </div>
+        </div> */}
         
         <div className="affiliations-text">
           <div className="affiliation-list">
