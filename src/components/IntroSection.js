@@ -15,13 +15,13 @@ const IntroSection = () => {
                   <img src={`${process.env.PUBLIC_URL}/a.png`} alt="Movie Facts and Fibs (MF2): A Benchmark for Long Movie Understanding" className="tower-image-title" />
                 </div> */} 
               <h1 className="paper-main-title">
-                🍿 MF<sup>2</sup>: Movie Facts and Fibs 
+                🍿 How Well Do Vision-Language Models<br />Understand Movies?
               </h1>
               {/* <h2 className="paper-subtitle-text">
                 <span style={{fontStyle: 'normal'}}>⏳</span> MF2 is under review ...
               </h2> */}
               <h2 className="paper-subtitle-text">
-                <span style={{fontStyle: 'normal'}}>🎥</span> A Benchmark for Long Movie Understanding ...
+                <span style={{fontStyle: 'normal'}}>🎥</span> Introducing MF<sup>2</sup> (Movie Facts and Fibs) - A Benchmark for Long Movie <span className="subtitle-keep">Understanding ...</span>
               </h2>
             </div>
 
@@ -40,7 +40,7 @@ const IntroSection = () => {
               <button 
                 className="btn-code"
                 style={{height: '3.5rem', width: '122px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-                onClick={() => window.open('https://github.com/deep-spin/MF2', '_blank')}
+                onClick={() => window.open('https://github.com/deep-spin/MF2-bench-how-well-vlms-understand-movies', '_blank')}
               ><img
                   src={`${process.env.PUBLIC_URL}/github-mark.svg`}
                   alt="GitHub repository"

@@ -1,30 +1,35 @@
 import React from 'react';
 import './LeaderboardSection.css';
 
+const formatScore = (value) => (value == null ? '—' : value.toFixed(1));
+
 const LeaderboardSection = () => {
+  // Ranked by pairwise accuracy on Video+Subs. Subs and Video are pairwise accuracy as well.
   const leaderboardData = [
-    { rank: '👤', model: 'Human Baseline', parameters: '—', openSource: null, videoTranscript: 84.1, videoOnly: null, isHuman: true },
-    { rank: 1, model: 'Gemini 2.5 Pro', parameters: '—', openSource: false, videoTranscript: 60.6, videoOnly: 37.2 },
-    { rank: 2, model: 'InternVL3', parameters: '78B', openSource: true, videoTranscript: 51.3, videoOnly: 22.1 },
-    { rank: 3, model: 'GPT-4o', parameters: '—', openSource: false, videoTranscript: 46.8, videoOnly: 18.8 },
-    { rank: 4, model: 'InternVL3.5', parameters: '38B', openSource: true, videoTranscript: 46.2, videoOnly: 26.6 },
-    { rank: 5, model: 'Qwen2.5-VL', parameters: '72B', openSource: true, videoTranscript: 45.9, videoOnly: 29.7 },
-    { rank: 6, model: 'Ovis2', parameters: '34B', openSource: true, videoTranscript: 45.6, videoOnly: 18.8 },
-    { rank: 7, model: 'Claude 3.7 Sonnet', parameters: '—', openSource: false, videoTranscript: 44.6, videoOnly: 2.8 },
-    { rank: 8, model: 'Gemma3', parameters: '27B', openSource: true, videoTranscript: 42.9, videoOnly: 31.5 },
-    { rank: 9, model: 'Qwen3VL-IT', parameters: '30B', openSource: true, videoTranscript: 42.3, videoOnly: 19.2 },
-    { rank: 10, model: 'LLaVA-Video', parameters: '72B', openSource: true, videoTranscript: 41.8, videoOnly: 15.6 },
-    { rank: 11, model: 'MiMo-VL-7B-RL', parameters: '7B', openSource: true, videoTranscript: 38.59, videoOnly: 25.81 },
-    { rank: 12, model: 'InternVL3', parameters: '8B', openSource: true, videoTranscript: 36.9, videoOnly: 10.9 },
-    { rank: 13, model: 'GLM-4.5V-FP8', parameters: '108B', openSource: true, videoTranscript: 35.59, videoOnly: null },
-    { rank: 14, model: 'VideoLLaMA3', parameters: '7B', openSource: true, videoTranscript: 33.5, videoOnly: 20.5 },
-    { rank: 15, model: 'Aria', parameters: '25B(3.9B)', openSource: true, videoTranscript: 33.41, videoOnly: 2.53 },
-    { rank: 16, model: 'Qwen2.5-VL', parameters: '7B', openSource: true, videoTranscript: 32.8, videoOnly: 24.6 },
-    { rank: 17, model: 'LLaVA-OneVision1.5', parameters: '8B', openSource: true, videoTranscript: 26.4, videoOnly: 4.9 },
-    { rank: 18, model: 'LLaVA-Video', parameters: '7B', openSource: true, videoTranscript: 19.0, videoOnly: 6.6 },
-    { rank: 19, model: 'LongVILA-R1', parameters: '7B', openSource: true, videoTranscript: 16.9, videoOnly: 11.5 },
-    { rank: 20, model: 'mPLUG-Owl3', parameters: '7B', openSource: true, videoTranscript: null, videoOnly: null, hasAsterisk: true },
-    { rank: 21, model: 'Kangaroo', parameters: '8B', openSource: true, videoTranscript: null, videoOnly: null, hasAsterisk: true },
+    { rank: '👤', model: 'Human Baseline', parameters: '—', openSource: null, subs: null, videoOnly: null, videoSubs: 84.1, isHuman: true },
+    { rank: '—', model: 'Random Baseline', parameters: '—', openSource: null, subs: 25.0, videoOnly: 25.0, videoSubs: 25.0, isBaseline: true },
+    { rank: 1, model: 'Gemini 2.5 Pro', parameters: '—', openSource: false, subs: 58.9, videoOnly: 37.9, videoSubs: 63.8 },
+    { rank: 2, model: 'InternVL3', parameters: '78B', openSource: true, subs: 49.0, videoOnly: 22.1, videoSubs: 51.3 },
+    { rank: 3, model: 'GPT-4o', parameters: '—', openSource: false, subs: 48.8, videoOnly: 19.5, videoSubs: 49.8 },
+    { rank: 4, model: 'Ovis2', parameters: '34B', openSource: true, subs: 47.2, videoOnly: 20.7, videoSubs: 48.5 },
+    { rank: 5, model: 'Qwen2.5-VL', parameters: '72B', openSource: true, subs: 37.6, videoOnly: 29.7, videoSubs: 47.5 },
+    { rank: 6, model: 'InternVL3.5', parameters: '38B', openSource: true, subs: 47.5, videoOnly: 26.6, videoSubs: 46.2 },
+    { rank: 7, model: 'Qwen3VL-IT', parameters: '30B', openSource: true, subs: 33.5, videoOnly: 19.2, videoSubs: 43.8 },
+    { rank: 8, model: 'Molmo2', parameters: '8B', openSource: true, subs: 41.0, videoOnly: 28.3, videoSubs: 43.0 },
+    { rank: 9, model: 'LLaVA-Video', parameters: '72B', openSource: true, subs: 41.7, videoOnly: 15.6, videoSubs: 41.8 },
+    { rank: 10, model: 'Gemma3', parameters: '27B', openSource: true, subs: 42.3, videoOnly: 31.5, videoSubs: 39.7 },
+    { rank: 11, model: 'MiMo-VL-7B-RL', parameters: '7B', openSource: true, subs: 36.4, videoOnly: 25.8, videoSubs: 38.6 },
+    { rank: 12, model: 'InternVL3.5', parameters: '8B', openSource: true, subs: 39.2, videoOnly: 18.9, videoSubs: 37.2 },
+    { rank: 13, model: 'VideoLLaMA3', parameters: '7B', openSource: true, subs: 36.3, videoOnly: 21.1, videoSubs: 36.1 },
+    { rank: 14, model: 'Aria', parameters: '25B (3.9B)', openSource: true, subs: 36.2, videoOnly: 2.5, videoSubs: 33.4 },
+    { rank: 15, model: 'Qwen2.5-VL', parameters: '7B', openSource: true, subs: 31.7, videoOnly: 24.5, videoSubs: 32.8 },
+    { rank: 16, model: 'GLM-4.5V-FP8', parameters: '108B', openSource: true, subs: 38.4, videoOnly: 26.6, videoSubs: 31.4 },
+    { rank: 17, model: 'LLaVA-OneVision1.5', parameters: '8B', openSource: true, subs: 37.4, videoOnly: 4.9, videoSubs: 26.4 },
+    { rank: 18, model: 'LLaVA-Video', parameters: '7B', openSource: true, subs: 20.5, videoOnly: 6.5, videoSubs: 19.1 },
+    { rank: 19, model: 'LongVILA-R1', parameters: '7B', openSource: true, subs: 9.8, videoOnly: 11.5, videoSubs: 16.9 },
+    { rank: '—', model: 'Phi4', parameters: '14B', openSource: true, subs: 26.8, videoOnly: null, videoSubs: null, hasAsterisk: true },
+    { rank: '—', model: 'mPLUG-Owl3', parameters: '7B', openSource: true, subs: null, videoOnly: null, videoSubs: null, hasAsterisk: true },
+    { rank: '—', model: 'Kangaroo', parameters: '8B', openSource: true, subs: null, videoOnly: null, videoSubs: null, hasAsterisk: true },
   ];
 
   return (
@@ -45,25 +50,38 @@ const LeaderboardSection = () => {
                 <th className="rank-header">Rank</th>
                 <th className="model-header">Model</th>
                 <th className="parameters-header">Parameters</th>
-                <th className="opensource-header">Open-source</th>
+                <th className="opensource-header">Open-weight</th>
                 <th className="score-header">
                   <div className="header-text">🏆 Pairwise Acc</div>
-                  <div className="header-subtext">(Video+Transcript)</div>
+                  <div className="header-subtext">(Video+Subs)</div>
                 </th>
                 <th className="score-header">
                   <div className="header-text">Pairwise Acc</div>
                   <div className="header-subtext">(Video Only)</div>
                 </th>
+                <th className="score-header">
+                  <div className="header-text">Pairwise Acc</div>
+                  <div className="header-subtext">(Transcript Only)</div>
+                </th>
               </tr>
             </thead>
             <tbody>
               {leaderboardData.map((entry, index) => (
-                <tr key={index} className={entry.isHuman ? "leaderboard-row human-row" : "leaderboard-row"}>
+                <tr
+                  key={index}
+                  className={[
+                    'leaderboard-row',
+                    entry.isHuman ? 'human-row' : '',
+                    entry.rank === 1 ? 'rank-1' : '',
+                    entry.rank === 2 ? 'rank-2' : '',
+                    entry.rank === 3 ? 'rank-3' : '',
+                  ].filter(Boolean).join(' ')}
+                >
                   <td className="rank-cell">
-                    {entry.isHuman ? (
-                      <span className="rank-icon">{entry.rank}</span>
-                    ) : (
+                    {typeof entry.rank === 'number' ? (
                       <span className="rank-number">{entry.rank}</span>
+                    ) : (
+                      <span className={entry.isHuman ? 'rank-icon' : 'rank-dash'}>{entry.rank}</span>
                     )}
                   </td>
                   <td className="model-cell">
@@ -80,8 +98,9 @@ const LeaderboardSection = () => {
                       <span className="icon-cross">✗</span>
                     )}
                   </td>
-                  <td className="score-cell">{entry.videoTranscript !== null ? entry.videoTranscript.toFixed(entry.videoTranscript % 1 === 0 ? 1 : 2) : '—'}</td>
-                  <td className="score-cell">{entry.videoOnly !== null ? entry.videoOnly.toFixed(entry.videoOnly % 1 === 0 ? 1 : 2) : '—'}</td>
+                  <td className="score-cell">{formatScore(entry.videoSubs)}</td>
+                  <td className="score-cell">{formatScore(entry.videoOnly)}</td>
+                  <td className="score-cell">{formatScore(entry.subs)}</td>
                 </tr>
               ))}
             </tbody>
@@ -90,7 +109,7 @@ const LeaderboardSection = () => {
         
         <div className="leaderboard-notes">
           <p className="note-text">
-            <span className="note-asterisk">(*)</span> Results for these models are omitted, as they did not comply with the instruction prompt.
+            <span className="note-asterisk">(*)</span> These models failed to follow the instruction prompt on a substantial fraction of samples, so missing scores are not reported. Phi4 reports transcript-only results only.
           </p>
           <p className="note-text">
             🚀 <strong>Add your model to the leaderboard!</strong> Reach out at {' '}

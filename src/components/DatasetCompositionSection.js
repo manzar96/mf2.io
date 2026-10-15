@@ -3,9 +3,8 @@ import './DatasetCompositionSection.css';
 
 const DatasetCompositionSection = () => {
   const granularityData = [
-    { label: 'Single-scene', percentage: 49.4, color: '#3b82f6' },
-    { label: 'Multi-scene', percentage: 43.8, color: '#8b5cf6' },
-    { label: 'Global', percentage: 6.8, color: '#ec4899' }
+    { label: 'Single-scene (answerable from one scene)', percentage: 49.4, color: '#3b82f6' },
+    { label: 'Multi-scene/Global (combines info across the movie)', percentage: 50.6, color: '#8b5cf6' }
   ];
 
   const comprehensionData = [
