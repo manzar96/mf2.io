@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <IntroSection />
+      <AuthorsSection />
       <WhatsNewSection />
       {/* <AbstractSection /> */}
       <MoviePreviewSection />
@@ -27,7 +28,6 @@ function App() {
       <DatasetCompositionSection />
       <LeaderboardSection />
       <AblationsSection />
-      <AuthorsSection />
       <CitationSection />
       <ContactSection />
       {/* <ModelStructureSection /> */}
