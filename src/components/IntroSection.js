@@ -51,7 +51,7 @@ const IntroSection = () => {
               <button 
                 className="btn-huggingface"
                 style={{height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-                onClick={() => window.open('https://huggingface.co/datasets/sardinelab/MF2', '_blank')}
+                onClick={() => window.open('https://huggingface.co/datasets/sardinelab/MF2-movie-facts-and-fibs', '_blank')}
               >🤗 Dataset
               </button>
               <button 
