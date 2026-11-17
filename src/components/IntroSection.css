@@ -92,7 +92,7 @@
   justify-content: center;
 }
 
-.btn-primary, .btn-secondary, .btn-arxiv, .btn-code, .btn-huggingface, .btn-leaderboard {
+.btn-primary, .btn-secondary, .btn-arxiv, .btn-code, .btn-huggingface, .btn-leaderboard, .btn-citation {
   padding: 0.875rem 1.5rem;
   border-radius: 10px;
   font-weight: 600;
@@ -117,7 +117,7 @@
   font-weight: 700;
 }
 
-.btn-primary:hover, .btn-secondary:hover, .btn-arxiv:hover, .btn-code:hover, .btn-huggingface:hover, .btn-leaderboard:hover {
+.btn-primary:hover, .btn-secondary:hover, .btn-arxiv:hover, .btn-code:hover, .btn-huggingface:hover, .btn-leaderboard:hover, .btn-citation:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }

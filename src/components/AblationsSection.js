@@ -8,7 +8,7 @@ const AblationsSection = () => {
         <h3 className="ablations-title">
           📌 Curious to learn more?{' '} Check out our
           <a 
-            href="https://arxiv.org/abs/2506.06275" 
+            href="https://aclanthology.org/2026.emnlp-main.1702/"
             target="_blank" 
             rel="noopener noreferrer"
             className="paper-link"

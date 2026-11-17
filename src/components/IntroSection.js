@@ -26,16 +26,28 @@ const IntroSection = () => {
             </div>
 
             <div className="hero-buttons">
-              <button 
+              {/* <button 
                 className="btn-arxiv" 
                 style={{height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-                onClick={() => window.open('https://arxiv.org/abs/2506.06275', '_blank')}
+                onClick={() => window.open('https://aclanthology.org/2026.emnlp-main.1702/', '_blank')}
               >
                 <img 
                   src={`${process.env.PUBLIC_URL}/arxiv-logo.svg`} 
                   alt="arXiv" 
                   style={{width: '62px', height: '20px'}}
                 />
+              </button> */}
+              <button
+                className="btn-arxiv"
+                style={{height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+                onClick={() => window.open('https://aclanthology.org/2026.emnlp-main.1702/', '_blank')}
+              >
+                <img
+                  src={`${process.env.PUBLIC_URL}/emnlp2026-budapest.png`}
+                  alt="EMNLP 2026"
+                  style={{height: '28px', width: 'auto'}}
+                />
+                Paper
               </button>
               <button 
                 className="btn-code"
@@ -59,6 +71,12 @@ const IntroSection = () => {
                 style={{height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                 onClick={() => document.getElementById('leaderboard-section')?.scrollIntoView({ behavior: 'smooth' })}
               >🏆 Leaderboard
+              </button>
+              <button
+                className="btn-citation"
+                style={{height: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+                onClick={() => document.getElementById('citation-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >📚 Cite us
               </button>
             </div>
           </div>

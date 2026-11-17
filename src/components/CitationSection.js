@@ -70,7 +70,7 @@ const CitationSection = () => {
   };
 
   return (
-    <section className="citation-section">
+    <section id="citation-section" className="citation-section">
       <div className="citation-container">
         <h3 className="citation-title">📚 Citation</h3>
         
